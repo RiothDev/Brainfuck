@@ -1,12 +1,8 @@
 #include "Interpreter.hpp"
 
 int main(int argc, char* argv[]) {
-    std::string filePath, fileContent;
-
-    std::cout << "> File path: ";
-    std::cin >> filePath;
-
-    Interpreter interpreter(filePath);
+    std::string fileContent;
+    Interpreter interpreter(argv[1]);
 
     if(interpreter.getFileContent(fileContent)) {
         interpreter.readCode(fileContent);   
